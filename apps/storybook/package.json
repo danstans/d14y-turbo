@@ -1,0 +1,33 @@
+{
+    "name": "storybook",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "start-storybook -p 4000 -s public --ci --no-manager-cache",
+      "build": "build-storybook -o dist --quiet",
+      "lint": "next lint"
+    },
+    "dependencies": {
+      "next": "12.0.3",
+      "react": "17.0.2",
+      "react-dom": "17.0.2"
+    },
+    "devDependencies": {
+      "@types/react": "17.0.37",
+      "config": "*",
+      "eslint": "7.32.0",
+      "next-transpile-modules": "9.0.0",
+      "tailwindcss": "^3.0.0",
+      "tsconfig": "*",
+      "typescript": "4.5.2",
+      "@storybook/addon-a11y": "6.4.0",
+      "@storybook/addon-actions": "^6.4.1",
+      "@storybook/addon-docs": "6.4.0",
+      "@storybook/addon-essentials": "^6.4.1",
+      "@storybook/addon-links": "^6.4.1",
+      "@storybook/addon-postcss": "2.0.0",
+      "@storybook/react": "^6.4.1",
+      "storybook-dark-mode": "1.0.8"
+    }
+  }
+  
