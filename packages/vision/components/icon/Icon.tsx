@@ -28,7 +28,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       ref: iconRef,
       width,
       height: width,
-      className: cn("flex-grow-0 flex-shrink-0", className),
+      className: cn("vision-flex-grow-0 vision-flex-shrink-0", className),
     };
 
     // Exceptions to FeatherIcons

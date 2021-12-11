@@ -118,8 +118,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 !isDisabled &&
                 !isHovered &&
                 !isPressed,
-              "vision-bg-green-600 vision-text-white": variant === "primary" && isHovered,
-              "vision-bg-green-700 vision-text-white": variant === "primary" && isPressed,
+              "vision-bg-green-600 vision-text-white":
+                variant === "primary" && isHovered,
+              "vision-bg-green-700 vision-text-white":
+                variant === "primary" && isPressed,
               "vision-bg-green-300 vision-text-green-100":
                 variant === "primary" && isDisabled,
             },
@@ -142,9 +144,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 !isDisabled &&
                 !isHovered &&
                 !isPressed,
-              "vision-bg-red-700 vision-text-white": variant === "negative" && isHovered,
-              "vision-bg-red-800 vision-text-white": variant === "negative" && isPressed,
-              "vision-bg-red-300 vision-text-red-100": variant === "negative" && isDisabled,
+              "vision-bg-red-700 vision-text-white":
+                variant === "negative" && isHovered,
+              "vision-bg-red-800 vision-text-white":
+                variant === "negative" && isPressed,
+              "vision-bg-red-300 vision-text-red-100":
+                variant === "negative" && isDisabled,
             },
             {
               underline: variant === "link",

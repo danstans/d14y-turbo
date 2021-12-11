@@ -1,4 +1,4 @@
-import './styles/output.css';
+import "./styles/output.css";
 
 export * from "./components/button/Button";
 export * from "./components/button-group/ButtonGroup";

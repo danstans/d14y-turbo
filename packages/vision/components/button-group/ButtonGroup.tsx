@@ -23,7 +23,7 @@ export function ButtonGroup({ id, children }: ButtonGroupProps) {
       <section
         id={id}
         role="button-group"
-        className="flex flex-row-reverse flex-grow space-x-4"
+        className="vision-flex vision-flex-row-reverse vision-flex-grow vision-space-x-4"
       >
         {React.cloneElement(buttons[0], {
           variant: buttons[0].props.variant ?? "primary",
@@ -35,7 +35,7 @@ export function ButtonGroup({ id, children }: ButtonGroupProps) {
       <section
         id={id}
         role="button-group"
-        className="flex flex-grow justify-between"
+        className="vision-flex vision-flex-grow vision-justify-between"
       >
         {React.cloneElement(buttons[1], {
           variant: buttons[1].props.variant ?? "secondary",
@@ -50,12 +50,12 @@ export function ButtonGroup({ id, children }: ButtonGroupProps) {
       <section
         id={id}
         role="button-group"
-        className="flex flex-grow justify-between"
+        className="vision-flex vision-flex-grow vision-justify-between"
       >
         {React.cloneElement(buttons[2], {
           variant: buttons[2].props.variant ?? "link",
         } as ButtonProps)}
-        <div className="flex space-x-4">
+        <div className="vision-flex vision-space-x-4">
           {React.cloneElement(buttons[1], {
             variant: buttons[1].props.variant ?? "secondary",
           } as ButtonProps)}

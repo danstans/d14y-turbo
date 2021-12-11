@@ -38,14 +38,15 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
           {...mergeProps(linkProps, hoverProps)}
           href={href}
           rel="noopener noreferrer"
-          className={cn("mx-1 underline", {
-            "flex justify-center items-center space-x-2":
+          className={cn("vision-mx-1 vision-underline", {
+            "vision-flex vision-justify-center vision-items-center vision-space-x-2":
               typeof children !== "string", // If "rich" children are provided, lay them out correctly
-            "text-gray-600 dark:text-gray-400": !isHovered && !isDisabled,
-            "text-gray-700 dark:text-gray-300": isHovered,
-            "text-gray-800 dark:text-gray-600": isPressed,
-            "text-gray-400 dark:text-gray-700": isDisabled,
-            "cursor-not-allowed": isDisabled,
+            "vision-text-gray-600 dark:vision-text-gray-400":
+              !isHovered && !isDisabled,
+            "vision-text-gray-700 dark:vision-text-gray-300": isHovered,
+            "vision-text-gray-800 dark:vision-text-gray-600": isPressed,
+            "vision-text-gray-400 dark:vision-text-gray-700": isDisabled,
+            "vision-cursor-not-allowed": isDisabled,
           })}
           target={openInNewTab ? "_blank" : undefined}
         >
