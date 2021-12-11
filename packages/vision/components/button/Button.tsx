@@ -104,57 +104,57 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
            */
           onClick={onClick}
           className={cn(
-            "flex justify-center items-center",
-            "h-8 px-3 py-1.5 rounded-md",
-            "text-sm whitespace-nowrap",
+            "vision-flex vision-justify-center vision-items-center",
+            "vision-h-8 vision-px-3 vision-py-1.5 vision-rounded-md",
+            "vision-text-sm vision-whitespace-nowrap",
             {
-              "cursor-not-allowed": isDisabled,
-              "flex-grow": fillParent,
+              "vision-cursor-not-allowed": isDisabled,
+              "vision-flex-grow": fillParent,
             },
             {
-              "font-medium": variant === "primary",
-              "bg-green-500 text-white":
+              "vision-font-medium": variant === "primary",
+              "vision-bg-green-500 vision-text-white":
                 variant === "primary" &&
                 !isDisabled &&
                 !isHovered &&
                 !isPressed,
-              "bg-green-600 text-white": variant === "primary" && isHovered,
-              "bg-green-700 text-white": variant === "primary" && isPressed,
-              "bg-green-300 text-green-100":
+              "vision-bg-green-600 vision-text-white": variant === "primary" && isHovered,
+              "vision-bg-green-700 vision-text-white": variant === "primary" && isPressed,
+              "vision-bg-green-300 vision-text-green-100":
                 variant === "primary" && isDisabled,
             },
             {
-              "font-medium": variant === "secondary",
-              "bg-gray-200 text-gray-800":
+              "vision-font-medium": variant === "secondary",
+              "vision-bg-gray-200 text-gray-800":
                 variant === "secondary" &&
                 !isDisabled &&
                 !isHovered &&
                 !isPressed,
-              "bg-gray-300": variant === "secondary" && isHovered,
-              "bg-gray-400": variant === "secondary" && isPressed,
-              "bg-gray-200 text-gray-500":
+              "vision-bg-gray-300": variant === "secondary" && isHovered,
+              "vision-bg-gray-400": variant === "secondary" && isPressed,
+              "vision-bg-gray-200 text-gray-500":
                 variant === "secondary" && isDisabled,
             },
             {
-              "font-medium": variant === "negative",
-              "bg-red-600 text-white":
+              "vision-font-medium": variant === "negative",
+              "vision-bg-red-600 text-white":
                 variant === "negative" &&
                 !isDisabled &&
                 !isHovered &&
                 !isPressed,
-              "bg-red-700 text-white": variant === "negative" && isHovered,
-              "bg-red-800 text-white": variant === "negative" && isPressed,
-              "bg-red-300 text-red-100": variant === "negative" && isDisabled,
+              "vision-bg-red-700 vision-text-white": variant === "negative" && isHovered,
+              "vision-bg-red-800 vision-text-white": variant === "negative" && isPressed,
+              "vision-bg-red-300 vision-text-red-100": variant === "negative" && isDisabled,
             },
             {
               underline: variant === "link",
-              "text-gray-600 dark:text-gray-400":
+              "vision-text-gray-600 dark:vision-text-gray-400":
                 variant === "link" && !isDisabled && !isHovered && !isPressed,
-              "text-gray-700 dark:text-gray-500":
+              "vision-text-gray-700 dark:vision-text-gray-500":
                 variant === "link" && isHovered,
-              "text-gray-800 dark:text-gray-600":
+              "vision-text-gray-800 dark:vision-text-gray-600":
                 variant === "link" && isPressed,
-              "text-gray-400 dark:text-gray-600":
+              "vision-text-gray-400 dark:vision-text-gray-600":
                 variant === "link" && isDisabled,
             }
           )}

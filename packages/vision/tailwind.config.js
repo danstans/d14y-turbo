@@ -1,6 +1,7 @@
 module.exports = {
   mode: "jit",
-  content: ["./pages/**/*.{ts,tsx,js,jsx}"],
+  content: ["./**/*.{ts,tsx,js,jsx}"],
+  prefix: 'vision-',
   theme: {
     extend: {},
   },

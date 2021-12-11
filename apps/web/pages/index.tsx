@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Button } from "ui";
+import { Button } from "vision";
 
 export default function Web() {
   return (
@@ -13,7 +13,7 @@ export default function Web() {
         />
       </Head>
 
-      <div className="container mx-auto px-4 lg:px-8 lg:leading-relaxed">
+      <div className="md:container mx-auto md:px-4 lg:px-8 lg:leading-relaxed">
         <span className="font-bold text-3xl lg:text-5xl">
           Hey!
           <span className="pl-4 wave">👋</span>
@@ -32,7 +32,6 @@ export default function Web() {
         <div className="hidden md:block lg:text-2xl">
           <span>Previously at Odin Labs, Renew Health and G.E Digital.</span>
         </div>
-        <Button>asdf</Button>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 {
-  "name": "ui",
+  "name": "vision",
   "version": "1.0.0",
   "main": "./index.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "npx tailwindcss -o ./styles/output.css -w",
-    "build": "npx tailwindcss -o ./styles/output.css && NODE_ENV=production rollup -c"
+    "dev": "tailwindcss -o ./styles/output.css -w",
+    "build": "tailwindcss -o ./styles/output.css --minify && NODE_ENV=production rollup -c"
   },
   "files": [
     "styles/output.css"
