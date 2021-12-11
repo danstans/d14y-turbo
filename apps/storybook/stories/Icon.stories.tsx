@@ -1,4 +1,4 @@
-import { Icon } from "ui";
+import { Icon } from "vision";
 
 export const Default = (props) => <Icon {...props} />;
 Default.storyName = "[Controlled]";

@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { Button } from "ui";
+import { Button } from "vision";
 
 const noIcon = null;
 const databaseIcon = "database";

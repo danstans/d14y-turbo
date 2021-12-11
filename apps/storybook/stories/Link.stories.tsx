@@ -1,5 +1,5 @@
-import { Link } from "ui";
-import { Icon } from "ui";
+import { Link } from "vision";
+import { Icon } from "vision";
 
 export const Default = (props) => <Link {...props}>Link</Link>;
 Default.storyName = "[Controlled]";

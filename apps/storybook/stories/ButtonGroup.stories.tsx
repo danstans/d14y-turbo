@@ -1,6 +1,6 @@
 import { action } from "@storybook/addon-actions";
-import { ButtonGroup } from "ui";
-import { Button } from "ui";
+import { ButtonGroup } from "vision";
+import { Button } from "vision";
 
 export default {
   title: "Vision/ButtonGroup",
