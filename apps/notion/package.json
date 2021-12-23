@@ -12,7 +12,12 @@
     "notion-client": "^4.12.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-notion-x": "^4.12.0"
+    "react-notion-x": "^4.12.0",
+    "@google-cloud/firestore": "^5.0.1",
+    "expiry-map": "^1.1.0",
+    "notion-types": "^4.10.0",
+    "notion-utils": "^4.12.0",
+    "p-memoize": "^6.0.1"
   },
   "devDependencies": {
     "eslint": "8.5.0",
