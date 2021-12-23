@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import "../styles/output.css";
 import { useEffect } from "react";
 
+import { VisionProvider } from "vision";
+
 function MyApp({ Component, pageProps }) {
   const updateEmoji = () => {
     const emojis = ["🚀", "👋", "🔥", "🤣", "✨", "🎉"];
@@ -18,7 +20,11 @@ function MyApp({ Component, pageProps }) {
     updateEmoji();
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <VisionProvider>
+      <Component {...pageProps} />
+    </VisionProvider>
+  );
 }
 
 export default MyApp;

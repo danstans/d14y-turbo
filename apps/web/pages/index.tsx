@@ -6,10 +6,7 @@ export default function Web() {
     <div className="transition duration-500 ease-in-out h-screen flex flex-col justify-center md:items-end md:justify-end lg:pb-40 2xl:pb-80 bg-white dark:bg-gray-800 dark:text-white">
       <Head>
         <title>d14y</title>
-        <link
-          rel="icon"
-          id="favicon"
-        />
+        <link rel="icon" id="favicon" />
       </Head>
 
       <div className="md:container mx-auto md:px-4 lg:px-8 lg:leading-relaxed">
@@ -31,6 +28,7 @@ export default function Web() {
         <div className="hidden md:block lg:text-2xl">
           <span>Previously at Odin Labs, Renew Health and G.E Digital.</span>
         </div>
+        <Button>This is a button</Button>
       </div>
     </div>
   );
