@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Button } from "vision";
 
 export default function Web() {
   return (
@@ -28,7 +27,6 @@ export default function Web() {
         <div className="hidden md:block lg:text-2xl">
           <span>Previously at Odin Labs, Renew Health and G.E Digital.</span>
         </div>
-        <Button>This is a button</Button>
       </div>
     </div>
   );
