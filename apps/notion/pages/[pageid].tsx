@@ -42,7 +42,7 @@ export async function getStaticPaths() {
     paths: siteMaps.flatMap((siteMap) =>
       Object.keys(siteMap.canonicalPageMap).map((pageId) => ({
         params: {
-          pageId
+          pageId: pageId?.toString()
         }
       }))
     ),
