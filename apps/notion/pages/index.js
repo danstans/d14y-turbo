@@ -1,8 +1,7 @@
 import React from 'react'
 import { domain } from '../lib/config'
 import { resolveNotionPage } from '../lib/resolve-notion-page'
-import { NotionRenderer, Code, Collection, CollectionRow } from 'react-notion-x'
-
+import { NotionPage } from '../components'
 
 export const getStaticProps = async () => {
   try {
@@ -19,5 +18,5 @@ export const getStaticProps = async () => {
 }
 
 export default function NotionDomainPage(props) {
-  return <NotionRenderer {...props} fullPage={true} darkMode={true} />
+  return <NotionPage {...props} />
 }
