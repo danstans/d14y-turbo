@@ -1,52 +1,57 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { NotionAPI } from 'notion-client'
-import { NotionRenderer } from 'react-notion-x'
-
-const notion = new NotionAPI();
+import React from 'react'
+import { isDev, domain } from '../lib/config'
+import { getSiteMaps } from '../lib/get-site-maps'
+import { resolveNotionPage } from '../lib/resolve-notion-page'
+import { NotionPage } from '../components'
 
 export const getStaticProps = async (context) => {
-    const pageId = context?.params?.pageid;
+  const rawPageId = context.params.pageId as string
 
-    // const props = await resolveNotionPage(domain, rawPageId)
-    console.log(pageId);
-    const recordMap = await notion.getPage(pageId)
-
-
-    return { props: {
-      recordMap
-    }, revalidate: 10 }
-  }
-
-  export async function getStaticPaths() {
+  try {
+    if (rawPageId === 'sitemap.xml' || rawPageId === 'robots.txt') {
       return {
-        paths: [],
-        fallback: true
+        redirect: {
+          destination: `/api/${rawPageId}`
+        }
       }
-  
-    // const siteMaps = await getSiteMaps()
-  
-    // const ret = {
-    //   paths: siteMaps.flatMap((siteMap) =>
-    //     Object.keys(siteMap.canonicalPageMap).map((pageId) => ({
-    //       params: {
-    //         pageId
-    //       }
-    //     }))
-    //   ),
-    //   // paths: [],
-    //   fallback: true
-    // }
-  
-    // console.log(ret.paths)
-    // return ret
+    }
+
+    const props = await resolveNotionPage(domain, rawPageId)
+
+    return { props, revalidate: 10 }
+  } catch (err) {
+    console.error('page error', domain, rawPageId, err)
+
+    // we don't want to publish the error version of this page, so
+    // let next.js know explicitly that incremental SSG failed
+    throw err
+  }
+}
+
+export async function getStaticPaths() {
+  if (isDev) {
+    return {
+      paths: [],
+      fallback: true
+    }
   }
 
+  const siteMaps = await getSiteMaps()
 
-export default function Home(props) {
+  const ret = {
+    paths: siteMaps.flatMap((siteMap) =>
+      Object.keys(siteMap.canonicalPageMap).map((pageId) => ({
+        params: {
+          pageId
+        }
+      }))
+    ),
+    fallback: true
+  }
 
-  return (
-    <NotionRenderer recordMap={props?.recordMap} fullPage={true} darkMode={false} />
-  )
+  return ret
+}
+
+export default function NotionDomainDynamicPage(props) {
+  return <NotionPage {...props} />
 }
