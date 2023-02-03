@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 
 export default function Web() {
@@ -24,6 +25,7 @@ export default function Web() {
         <span className="hidden md:block text-center md:text-left lg:text-2xl">
           Currently at Capable Health.
         </span>
+        <a href="iMessage://danielsstansberry@gmail.com">Click here</a>
         <div className="hidden md:block lg:text-2xl">
           <span>Previously at Odin Labs, Renew Health and G.E Digital.</span>
         </div>
